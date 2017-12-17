@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EmotiPix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="dAF-UZ-reI">
+                                <rect key="frame" x="98" y="617" width="179" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YE6-sO-AdW">
+                                        <rect key="frame" x="0.0" y="0.0" width="84" height="30"/>
+                                        <state key="normal" title="Take picture"/>
+                                        <connections>
+                                            <action selector="didTapTakePicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lFY-X2-mUG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6A-O9-541">
+                                        <rect key="frame" x="124" y="0.0" width="55" height="30"/>
+                                        <state key="normal" title="Process"/>
+                                        <connections>
+                                            <action selector="didTapProcessPicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wLV-P2-Var"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emotion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eOF-T3-AkB">
+                                <rect key="frame" x="127.5" y="40" width="120" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="chO-GV-0eV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNZ-YT-fhH">
+                                <rect key="frame" x="131" y="80.5" width="113" height="30"/>
+                                <state key="normal" title="Change Emotion"/>
+                                <connections>
+                                    <action selector="didTapChangeEmotion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TFw-hc-zDj"/>
+                                </connections>
+                            </button>
+                            <pickerView clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="cLa-f3-RN8">
+                                <rect key="frame" x="27.5" y="121" width="320" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="WPq-Mv-jb3"/>
+                                </constraints>
+                            </pickerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="749" image="foto_f" translatesAutoresizingMaskIntoConstraints="NO" id="hkZ-mv-Fqn">
+                                <rect key="frame" x="20" y="131" width="335" height="446"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hkZ-mv-Fqn" firstAttribute="top" secondItem="cLa-f3-RN8" secondAttribute="bottom" constant="10" id="2x5-p1-U2J"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dAF-UZ-reI" secondAttribute="bottom" constant="20" id="5Lm-cD-nFn"/>
+                            <constraint firstItem="eOF-T3-AkB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="EPm-Zp-Jct"/>
+                            <constraint firstItem="qNZ-YT-fhH" firstAttribute="top" secondItem="eOF-T3-AkB" secondAttribute="bottom" constant="20" id="MnL-Wc-0xc"/>
+                            <constraint firstItem="cLa-f3-RN8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PE7-Zz-nXX"/>
+                            <constraint firstItem="cLa-f3-RN8" firstAttribute="top" secondItem="qNZ-YT-fhH" secondAttribute="bottom" constant="10" id="Wsj-Kj-Jy3"/>
+                            <constraint firstItem="hkZ-mv-Fqn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="deo-kK-1Ql"/>
+                            <constraint firstItem="hkZ-mv-Fqn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ghw-E5-Csb"/>
+                            <constraint firstItem="qNZ-YT-fhH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h2T-Dt-N2j"/>
+                            <constraint firstItem="eOF-T3-AkB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h2l-YJ-LVo"/>
+                            <constraint firstItem="dAF-UZ-reI" firstAttribute="top" secondItem="hkZ-mv-Fqn" secondAttribute="bottom" constant="40" id="xeA-uR-ypa"/>
+                            <constraint firstItem="dAF-UZ-reI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y5T-rn-Spf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hkZ-mv-Fqn" secondAttribute="trailing" constant="20" id="zZh-nC-F4x"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="emotionLabel" destination="eOF-T3-AkB" id="7mE-hd-vbi"/>
+                        <outlet property="emotionPickerView" destination="cLa-f3-RN8" id="seR-ru-Tew"/>
+                        <outlet property="emotionPickerViewHeight" destination="WPq-Mv-jb3" id="ekW-T4-zBY"/>
+                        <outlet property="imageView" destination="hkZ-mv-Fqn" id="JQ6-aN-Iiu"/>
+                        <outlet property="labelWidth" destination="chO-GV-0eV" id="YYf-KH-4Sr"/>
+                        <outlet property="processPictureButton" destination="L6A-O9-541" id="Ohb-Dw-PLf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="GeA-aO-ute">
+            <objects>
+                <viewController id="APD-VG-LPI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0OM-Nx-kY4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="h4j-KB-wtq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JUf-ry-TOx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33" y="751"/>
+        </scene>
+        <!--Prepared Photos View Controller-->
+        <scene sceneID="05C-dp-34O">
+            <objects>
+                <viewController id="wem-m2-wyq" customClass="PreparedPhotosViewController" customModule="EmotiPix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gc1-PB-5XC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZpP-XD-noW">
+                                <rect key="frame" x="20" y="28" width="54" height="30"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="didPressDismissVC:" destination="wem-m2-wyq" eventType="touchUpInside" id="S1w-dj-xQ3"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZFT-Li-T95">
+                                <rect key="frame" x="39.5" y="101.5" width="296" height="464"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AGHRacing_sesja_liderzy_4" translatesAutoresizingMaskIntoConstraints="NO" id="oPe-Nu-cv5">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="TfQ-9F-2f9"/>
+                                            <constraint firstAttribute="width" constant="128" id="j6x-MJ-eTF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AGHRacing_sesja_liderzy_4" translatesAutoresizingMaskIntoConstraints="NO" id="7Ic-07-XWO">
+                                        <rect key="frame" x="168" y="0.0" width="128" height="128"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AGHRacing_sesja_liderzy_4" translatesAutoresizingMaskIntoConstraints="NO" id="TYL-jf-tPR">
+                                        <rect key="frame" x="0.0" y="168" width="128" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="UDz-Qt-2or"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AGHRacing_sesja_liderzy_4" translatesAutoresizingMaskIntoConstraints="NO" id="V3V-Ln-rqr">
+                                        <rect key="frame" x="168" y="168" width="128" height="128"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AGHRacing_sesja_liderzy_4" translatesAutoresizingMaskIntoConstraints="NO" id="u3T-y3-4yp">
+                                        <rect key="frame" x="0.0" y="336" width="128" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="128" id="Gg7-4x-v7P"/>
+                                            <constraint firstAttribute="height" constant="128" id="hR0-V5-QZh"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AGHRacing_sesja_liderzy_4" translatesAutoresizingMaskIntoConstraints="NO" id="CZa-Iz-FAA">
+                                        <rect key="frame" x="168" y="336" width="128" height="128"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="TYL-jf-tPR" firstAttribute="top" secondItem="oPe-Nu-cv5" secondAttribute="bottom" constant="40" id="0E9-6c-OH7"/>
+                                    <constraint firstItem="CZa-Iz-FAA" firstAttribute="width" secondItem="u3T-y3-4yp" secondAttribute="width" id="4mT-wF-wug"/>
+                                    <constraint firstItem="CZa-Iz-FAA" firstAttribute="leading" secondItem="u3T-y3-4yp" secondAttribute="trailing" constant="40" id="92C-DJ-Uh7"/>
+                                    <constraint firstItem="u3T-y3-4yp" firstAttribute="leading" secondItem="ZFT-Li-T95" secondAttribute="leading" id="B0f-Ok-aKG"/>
+                                    <constraint firstItem="V3V-Ln-rqr" firstAttribute="top" secondItem="TYL-jf-tPR" secondAttribute="top" id="BMu-g5-MpA"/>
+                                    <constraint firstItem="oPe-Nu-cv5" firstAttribute="top" secondItem="ZFT-Li-T95" secondAttribute="top" id="CQE-I6-NpY"/>
+                                    <constraint firstItem="7Ic-07-XWO" firstAttribute="height" secondItem="oPe-Nu-cv5" secondAttribute="height" id="Dae-Pg-yA7"/>
+                                    <constraint firstItem="V3V-Ln-rqr" firstAttribute="height" secondItem="TYL-jf-tPR" secondAttribute="height" id="HGc-bJ-St5"/>
+                                    <constraint firstItem="V3V-Ln-rqr" firstAttribute="top" secondItem="7Ic-07-XWO" secondAttribute="bottom" constant="40" id="JFU-SE-u0A"/>
+                                    <constraint firstItem="TYL-jf-tPR" firstAttribute="leading" secondItem="ZFT-Li-T95" secondAttribute="leading" id="Myq-jB-lyx"/>
+                                    <constraint firstItem="7Ic-07-XWO" firstAttribute="top" secondItem="oPe-Nu-cv5" secondAttribute="top" id="N7m-Hg-U0t"/>
+                                    <constraint firstAttribute="trailing" secondItem="7Ic-07-XWO" secondAttribute="trailing" id="QhT-5W-KeY"/>
+                                    <constraint firstItem="oPe-Nu-cv5" firstAttribute="leading" secondItem="ZFT-Li-T95" secondAttribute="leading" id="Tp2-iL-AKJ"/>
+                                    <constraint firstItem="CZa-Iz-FAA" firstAttribute="top" secondItem="V3V-Ln-rqr" secondAttribute="bottom" constant="40" id="YNK-uW-Hfb"/>
+                                    <constraint firstItem="CZa-Iz-FAA" firstAttribute="top" secondItem="u3T-y3-4yp" secondAttribute="top" id="YVG-Vi-qOo"/>
+                                    <constraint firstItem="7Ic-07-XWO" firstAttribute="leading" secondItem="oPe-Nu-cv5" secondAttribute="trailing" constant="40" id="Z4i-1M-HtE"/>
+                                    <constraint firstItem="V3V-Ln-rqr" firstAttribute="centerY" secondItem="ZFT-Li-T95" secondAttribute="centerY" id="cG0-fM-m9I"/>
+                                    <constraint firstItem="u3T-y3-4yp" firstAttribute="top" secondItem="TYL-jf-tPR" secondAttribute="bottom" constant="40" id="dQY-Yw-aWB"/>
+                                    <constraint firstItem="V3V-Ln-rqr" firstAttribute="leading" secondItem="TYL-jf-tPR" secondAttribute="trailing" constant="40" id="dnp-8C-ivG"/>
+                                    <constraint firstItem="7Ic-07-XWO" firstAttribute="width" secondItem="oPe-Nu-cv5" secondAttribute="width" id="e2j-zy-9wU"/>
+                                    <constraint firstItem="V3V-Ln-rqr" firstAttribute="width" secondItem="TYL-jf-tPR" secondAttribute="width" id="jkx-HW-z3F"/>
+                                    <constraint firstItem="TYL-jf-tPR" firstAttribute="centerY" secondItem="ZFT-Li-T95" secondAttribute="centerY" id="luO-0a-pKA"/>
+                                    <constraint firstAttribute="trailing" secondItem="CZa-Iz-FAA" secondAttribute="trailing" id="qE6-Qi-xbm"/>
+                                    <constraint firstItem="CZa-Iz-FAA" firstAttribute="height" secondItem="u3T-y3-4yp" secondAttribute="height" id="yv6-tn-4V3"/>
+                                    <constraint firstAttribute="trailing" secondItem="V3V-Ln-rqr" secondAttribute="trailing" id="zVc-4u-L1N"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZFT-Li-T95" firstAttribute="centerX" secondItem="gc1-PB-5XC" secondAttribute="centerX" id="FXT-Ar-bb7"/>
+                            <constraint firstItem="ZpP-XD-noW" firstAttribute="top" secondItem="dvO-Bv-mhT" secondAttribute="top" constant="8" id="Hfa-fD-tHz"/>
+                            <constraint firstItem="dvO-Bv-mhT" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZFT-Li-T95" secondAttribute="trailing" constant="34" id="It0-s2-UcG"/>
+                            <constraint firstItem="ZFT-Li-T95" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dvO-Bv-mhT" secondAttribute="leading" constant="34" id="UsJ-jB-zif"/>
+                            <constraint firstItem="ZFT-Li-T95" firstAttribute="centerY" secondItem="gc1-PB-5XC" secondAttribute="centerY" id="oHk-ag-CBm"/>
+                            <constraint firstItem="ZpP-XD-noW" firstAttribute="leading" secondItem="dvO-Bv-mhT" secondAttribute="leading" constant="20" id="t4S-Dm-L9U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dvO-Bv-mhT"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Hs-wV-jT3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="894" y="800"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AGHRacing_sesja_liderzy_4" width="2048" height="1365"/>
+        <image name="foto_f" width="1024" height="1024"/>
+    </resources>
+</document>
